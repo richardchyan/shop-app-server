@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
 
 })
 
-const stripe = new Stripe('sk_test_51ImOlxH2l1C71DsF2jzDgMQemOEN74VRIfG4dqn6yR8OKQyURiJmezJhTo8Rn8VADlKG7OtUftYC1DBtV7s4wbDp00YAjVIvwX');
+const stripe = new Stripe(process.env.PRIVATE_STRIPE_KEY);
 
 const taxRates = await stripe.taxRates.create({
    display_name: 'HST',
