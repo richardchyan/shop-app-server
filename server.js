@@ -56,6 +56,7 @@ app.post('/create-checkout-session', async(req, res) => {
    })
 
    res.json({ url: session.url, session: session});
+   console.log(session);
 
 })
 
@@ -86,6 +87,7 @@ app.post('/create-checkout-session-free-shipping', async(req, res) => {
    })
 
    res.json({ url: session.url});
+   console.log(session);
 
 })
 
